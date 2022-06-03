@@ -1,0 +1,15 @@
+%h1 Listing posts
+- @posts.each do |post|
+  .p-5.mb-4.bg-light.rounded-3
+    .container-fluid.py-5
+      %h3.display-5.fw-bold
+        = post.title
+      %p.col-md-8.fs-4
+        = post.body
+      = link_to 'Show', post, class: "btn btn-primary btn-lg"
+      - if user_signed_in? && current_user.admin?
+        = link_to 'Edit', edit_post_path(post), class: "btn btn-primary btn-lg"
+        = link_to 'Destroy', post, data: { "turbo-method": :delete }, class: "btn btn-primary btn-lg"
+%br
+- if user_signed_in? && current_user.admin?
+  = link_to 'New Post', new_post_path

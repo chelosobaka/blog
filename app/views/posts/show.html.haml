@@ -1,0 +1,17 @@
+.container
+  %h1.mt-5= @post.title 
+  %p.lead= @post.body
+%hr
+  %h5.mt-5 Оставьте отзыв
+  - if user_signed_in? 
+    = form_with model: [@post, @review] do |f|
+      .form-group
+        = f.text_area :body, placeholder: "Оставить комментарий", autocomplete: 'off', class: "form-control"
+      .form-group.mt-2
+        = f.submit "Отправить", class: "btn btn-primary btn-lg"
+        
+  %h5.mt-5 Все отзывы
+  - @reviews.each do |review|
+    %p= review.user.email 
+    %p.lead= review.body
+    %hr
