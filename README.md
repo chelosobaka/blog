@@ -1,24 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Блог для тестового задания учи.ру
 
-Things you may want to cover:
+https://quiet-atoll-38593.herokuapp.com/
 
-* Ruby version
+логин для админа: admin@mail.ru
 
-* System dependencies
+password: adminban
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
